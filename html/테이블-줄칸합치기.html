@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 줄칸합치기</title>
+</head>
+<body>
+  <!-- 
+    6줄 tr*6
+    4칸 td*4
+    텍스트 {텍스트}
+   -->
+  <p>6줄 4칸</p>
+  <!-- 
+    table>tr*6>td*4>{텍스트}
+   -->
+  <table border="1" width="80%">
+    <tr><!--1tr-->
+      <td rowspan="2">
+        텍스
+      </td>
+      <td rowspan="2">텍스</td>
+      <td colspan="2">텍스</td>
+      <!-- <td>텍스</td> -->
+    </tr>
+    <tr><!--2tr-->
+      <!-- <td>텍스</td> -->
+      <!-- <td>텍스</td> -->
+      <td>텍스</td>
+      <td>텍스</td>
+    </tr>
+    <tr><!--3tr-->
+      <td rowspan="2">텍스</td>
+      <td>텍스</td>
+      <td>텍스</td>
+      <td>텍스</td>
+    </tr>
+    <tr><!--4tr-->
+      <!-- <td>텍스</td> -->
+      <td>텍스</td>
+      <td>텍스</td>
+      <td>텍스</td>
+    </tr>
+    <tr><!--5tr-->
+      <td rowspan="2">텍스</td>
+      <td>텍스</td>
+      <td>텍스</td>
+      <td>텍스</td>
+    </tr>
+    <tr><!--6tr-->
+      <!-- <td>텍스</td> -->
+      <td>텍스</td>
+      <td>텍스</td>
+      <td>텍스</td>
+    </tr>
+  </table>
+</body>
+</html>
