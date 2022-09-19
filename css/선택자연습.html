@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자연습</title>
+  <style>
+    /* #아이디 */
+    #section1{
+      background-color: #5ac65a;
+    }
+    #section2{
+      background-color: #fec25b;
+    }
+    #section3{
+      background-color: #41bcff;
+    }
+    /* .클랙스 */
+    /* .box  문서 내 모든 클래스box */
+    .box{color:#f00 ;}
+    /* 태그 선택작 */
+    /* type 선택자 */
+    h1{
+      color:#00f;
+    }
+    /* 조상 후손 공백문자 구분자  */
+    /* section p{
+      color:#ff0;
+    } */
+
+    /* 부모>자식 > 자식구분자 */
+    section > p {
+      color:#ff0;
+    }
+    /* + 인접형제 */
+    h1 + p{
+      background-color: #ccc;
+    }
+
+    /*  ~ 동생 */
+    h1 ~ p {
+      background-color: #3a2;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    div#wrap
+    태그#아이디명
+    #아이디명
+   -->
+   <div id="wrap">
+    <header>헤더</header>
+    <!-- .container -->
+    <div class="container">
+      <!-- 
+        section#section$*3
+       -->
+       <section id="section1">
+        <!-- p+.box -->
+        <p>내용</p>
+        <div class="box">
+          <!-- h1+p+p -->
+          <!-- h1+p*2 -->
+          <h1>섹션제목</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, cumque! Magni recusandae nulla quas expedita, et perferendis modi repudiandae ut ducimus, blanditiis voluptate enim nostrum, voluptatum at repellendus officiis ad.</p>
+          <p>동생</p>
+        </div>
+       </section>
+       <section id="section2">
+        <!-- p+.box -->
+        <p>내용</p>
+        <div class="box">
+          <!-- h1+p+p -->
+          <!-- h1+p*2 -->
+          <p>형님</p>
+          <h1>섹션제목</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, cumque! Magni recusandae nulla quas expedita, et perferendis modi repudiandae ut ducimus, blanditiis voluptate enim nostrum, voluptatum at repellendus officiis ad.</p>
+          <p>동생</p>
+        </div>
+       </section>
+       <section id="section3">
+         <!-- p+.box -->
+        <p>내용</p>
+        <div class="box">
+          <!-- h1+p+p -->
+          <!-- h1+p*2 -->
+          <h1>섹션제목</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, cumque! Magni recusandae nulla quas expedita, et perferendis modi repudiandae ut ducimus, blanditiis voluptate enim nostrum, voluptatum at repellendus officiis ad.</p>
+          <p>동생</p>
+        </div>
+       </section>
+
+    </div>
+    <footer>푸터</footer>
+
+   <!-- //#wrap -->
+   </div>
+</body>
+</html>
