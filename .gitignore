@@ -1,3 +1,5 @@
 *.zip
 *.psd
-cafe24/
+cafe24/skin*
+cafe24/base*
+cafe24/mobile*
