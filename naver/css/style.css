@@ -94,7 +94,8 @@ em {
 /*공통*/
 .blind {
   position: absolute;
-  clip: rect(0 0 0 0);
+  /* clip: rect(0 0 0 0); */
+  left:-9999px;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -202,3 +203,22 @@ html {
   line-height: 1.4;
   -webkit-text-size-adjust: none;
 }
+
+/* 레이아웃 */
+
+/* header */
+header{
+  margin:50px;
+}
+.header_logo{
+  background: url(../img/header_logo.png) center no-repeat;
+  width:87px;
+  background-size: 87px 17px;
+  background-color: #ccc;
+}
+.header_logo a{
+  display: block;
+  width: 87px;
+  height: 17px;
+}
+.header_logo a span{}
