@@ -205,11 +205,13 @@ html {
 }
 body{
   --naver-color:#1ec545;
+  --header-height:80px;
 }
 
 /* 레이아웃 */
 header{
   position: relative;
+  height: var(--header-height);
   background-color: #f8e;
 }
 header .header_wrap {
@@ -254,7 +256,8 @@ nav .gnb_menu_list a.gnb_menu_item{
   position: relative;/*nav .gnb_menu_list a.gnb_menu_item:after 기준요소*/
    display: block;
    margin:0 30px;
-   padding:30px 0;
+   height: var(--header-height);
+   padding-top:25px;
    font-size: 18px;
    color: #000;
 }
@@ -267,21 +270,27 @@ nav .gnb_menu_list a.gnb_menu_item:after{
   background-color: var(--naver-color);
   transform:scale(0);
 }
-nav .gnb_menu_list:hover a.gnb_menu_item:after{
+nav .gnb_menu_list:hover a.gnb_menu_item:after,
+nav .gnb_menu_list a.gnb_menu_item:focus:after{
    transform: scale(1);
    transition: transform 0.5s;
    transform-origin: 0 0;
 }
 nav .gnb_menu_list .gnb_dropMenu_wrap{
-  position: absolute;
-  display: none;/*depth2 서브메뉴 작업 삭제*/
+  position: absolute;/*기준요소*/
+  left:0; top:var(--header-height); 
+  width:100%;
+  background-color: var(--naver-color);
+  display: flex;
 }
 
 .gnb_dropMenu_wrap li{}
 .gnb_dropMenu_wrap .gnb_dropMenu{}
 .gnb_dropMenu li{}
 .gnb_dropMenu li.depth_blank{}
-.gnb_dropMenu li .gnb_dropMenu_item{}
+.gnb_dropMenu li .gnb_dropMenu_item{
+  color:#fff;
+}
 
 
 /* .header_util */
