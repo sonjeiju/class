@@ -202,7 +202,9 @@ html {
   font-style: normal;
   line-height: 1.4;
   -webkit-text-size-adjust: none;
+  background-color: #ccc;
 }
+/* 변수선언 */
 body{
   --naver-color:#1ec545;
   --header-height:80px;
@@ -212,13 +214,12 @@ body{
 header{
   position: relative;
   height: var(--header-height);
-  background-color: #f8e;
+  background-color: rgba(255,255,255,0.7);
 }
 header .header_wrap {
   display: flex;
   justify-content: space-between;/*양끝정렬 여백균등*/
   align-items: center;/*교차축 가운데*/
-  background-color: #ef8;
   margin:0 auto;
   max-width: 1600px;
 }
@@ -243,7 +244,6 @@ header .header_wrap {
 
 /* nav */
 nav{
-  background-color: #ccc;/*작업후 삭제*/
 } 
 nav .gnb_menu{
   /* 플렉스박스 플렉스컨테이너 */
@@ -276,18 +276,47 @@ nav .gnb_menu_list a.gnb_menu_item:focus:after{
    transition: transform 0.5s;
    transform-origin: 0 0;
 }
+/*모든 depth2서브메뉴.gnb_dropMenu_wrap*/
 nav .gnb_menu_list .gnb_dropMenu_wrap{
   position: absolute;/*기준요소*/
   left:0; top:var(--header-height); 
   width:100%;
   background-color: var(--naver-color);
   display: flex;
+  justify-content: center;
+  display: none; /*테스트후 삭제*/
+}
+/* 대메뉴 첫번째에 해당 서브메뉴
+.gnb_menu_list  대메뉴 첫번째
+.gnb_dropMenu_wrap  서브메뉴
+*/
+nav .gnb_menu_list:hover .gnb_dropMenu_wrap{
+  /* 대메뉴에 마우스 over한 메뉴의 서브메뉴 */
+    display: flex;
+}
+nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap{
+    /* display: flex;   */
+    /*서브작업후 삭제*/
+}
+.gnb_dropMenu_wrap > li{
+  width:190px;
+  height: 340px;
+  padding-top: 1.5rem;
+  padding-left:1.5rem;
+  border-left:1px solid #4bd16a;
+}
+.gnb_dropMenu_wrap > li:last-child{
+  border-right:1px solid #4bd16a;
 }
 
-.gnb_dropMenu_wrap li{}
-.gnb_dropMenu_wrap .gnb_dropMenu{}
-.gnb_dropMenu li{}
-.gnb_dropMenu li.depth_blank{}
+.gnb_dropMenu_wrap .gnb_dropMenu{
+}
+.gnb_dropMenu li{
+  padding:0.2rem 0;
+}
+.gnb_dropMenu li.depth_blank{
+  margin-bottom:1rem
+}
 .gnb_dropMenu li .gnb_dropMenu_item{
   color:#fff;
 }
