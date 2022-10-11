@@ -373,3 +373,15 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap{
   top:11px; width: calc(100% - 8px);}
 .sitemap_box .btn_sitemap span:nth-of-type(4){
   top:20px; width:100%;}
+
+
+  /* 플러그인 */
+  /* bxslider */
+  .bx-wrapper .bx-controls-direction a{
+    width:46px; height: 46px;}
+  .bx-wrapper .bx-prev {
+    background:url(../img/sprite.png) -296px -99px no-repeat;
+    background-size: 474px 1500px;}
+  .bx-wrapper .bx-prev:hover,
+  .bx-wrapper .bx-prev:focus{
+    background-position:  -296px -99px;}
