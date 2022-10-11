@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>naver corp bxslider</title>
-  <link rel="stylesheet" href="src/css/jquery.bxslider.css">
+  <title>navercorp - swiper</title>
+  <link rel="stylesheet" href="src/css/swiper8.4.3-bundle.min.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -397,22 +397,28 @@
   <!-- //header -->
   <!-- 본문 .container -->
   <div class="container">
-    <!-- 슬라이드 .main_slide -->
-    <div class="main_slide">
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide7.jpg" /></div>
+    <!-- .swiper.mySwiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide7.jpg" /></div>
+        </div>
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide9.jpg" /></div>
+        </div>
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide10.jpg" /></div>
+        </div>
       </div>
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide9.jpg" /></div>
-      </div>
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide10.jpg" /></div>
-      </div>
+      <!-- //.swiper-wrapper -->
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
     </div>
-    <!-- //슬라이드  .main_slide-->
+    <!-- //슬라이드  .swiper.mySwiper-->
   </div>
   <!-- //본문  //.container-->
 
@@ -422,28 +428,26 @@
   </footer>
 
 
-  <!-- jquery 연결 -->
-  <script src="src/vendor/jquery-3.1.1.min.js"></script>
-  <!-- bxslide 플러그인 연결 -->
-  <script src="src/js/jquery.bxslider.js"></script>
-  <!-- bxlide 적용 -->
+  <!-- swiper 플러그인 연결 -->
+  <script src="src/js/swiper8.4.3-bundle.min.js"></script>
+  <!-- swiper적용 -->
   <script>
-    $(document).ready(function(){
-      $('.main_slide').bxSlider({
-        // mode: 'horizontal',  //움직이는 방향 수평
-        //mode: 'vertical', //움직이는 방향 수직
-        mode:'fade',   //슬라이드 페이드인 아웃
-        moveSlides: 1,    //한번에 움직일 슬라이드 수
-        infiniteLoop: true, //무한루프
-        // slideWidth: 660,  슬라이드의 크기 지정
-        //minSlides: 2, 한번에 보여질 슬라이드 수
-        //maxSlides: 2, 한번에 보여질 슬라이드 수
-        speed: 400,
-        auto: true,
-        // autoControls: true,
-        stopAutoOnClick: true,
-      });
-    });
+    var swiper1 = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    }); 
+   
   </script>
 </body>
 
