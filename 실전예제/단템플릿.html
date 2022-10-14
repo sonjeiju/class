@@ -47,6 +47,7 @@
       .my-dan .my-row .my-col {
         flex-grow: 1;
         flex-shrink: 1;
+        box-sizing: border-box;
       }
 
       .my-dan.grid1 .my-row .my-col {
@@ -76,14 +77,29 @@
       }
 
       .my-dan .my-row .my-col-inner {
-        background-color: #ccc;
-        border: 1px solid #000;
+       
       }
       .my-dan .my-row .my-col-inner img {
         width: 100%;
         height: auto;
         display: block;
       }
+
+      /*배너매니저 유튜브 동영상 스타일*/
+    .df-bannermanager{
+      width:100%;
+      /* max-width:최대크기px; */
+    }
+    .df-bannermanager > div{
+      position: relative; padding-top:56.25%;
+      background-color: #000;
+    }
+    .df-bannermanager > div iframe{
+      position: absolute;
+      left:0;  top:0; 
+      width:100%;
+      height: 100%;
+    }
     </style>
   </head>
   <body>
