@@ -1,5 +1,6 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
 /*reset*/
 * {
   -webkit-box-sizing: border-box;
@@ -45,7 +46,8 @@ input,
 textarea,
 select,
 button {
-  font-family: "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial",
+  /* font-family: 'Nanum Gothic', sans-serif; */
+  font-family:'Nanum Gothic', "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial",
     "AppleSDGothicNeo", sans-serif;
   font-size: 14px;
 }
@@ -424,6 +426,54 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   width: 100%;
 }
 
+/* .main_content */
+.main_content{
+  padding:120px 150px;
+}
+.main_content ul.content_summary{
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch; */
+}
+.content_summary .summary_container{
+  flex-basis: 25%;
+  /* flex-grow: 0;
+  flex-shrink: 1; */
+  border: 1px solid #f00;
+  padding-right:50px;
+}
+.content_summary  h3.summary_title{
+  /* font-family: 'Nanum Gothic', sans-serif; */
+  font-size: 14px;
+  font-weight: 800;
+}
+.content_summary .text_wrap{}
+.content_summary .text_wrap .title_text{
+  width:100%;
+  margin:30px 0;
+}
+.content_summary .text_wrap .title_text strong{
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+}
+.content_summary .text_wrap .desc_text{}
+
+.content_summary .news{}
+.content_summary .career{}
+.content_summary .stock1{}
+.content_summary .stock2{}
+/* .main_content .content_service{}
+.main_content .content_support{} */
+
+/************ 
+*플러그인
+*************/
+
 /* 플러그인 */
 /* bxslider */
 .bx-wrapper {
@@ -514,3 +564,5 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 .swiper-pagination-bullet-active{
   width:40px;
 }
+
+
