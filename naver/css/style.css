@@ -513,6 +513,29 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   font-size:18px;
 }
 .content_summary .stock1{}
+/* 167000원 선택자 */
+/* 글자자크기 36px  자간 -1.7px */
+.content_summary .stock1 .price{
+  font-size: 36px;
+  letter-spacing: -1.7px;
+  border-bottom:1px solid #000;
+}
+/*"원"의 글자크기 12ppx*/
+.content_summary .stock1 .price .unit{
+  font-size: 12px;
+}
+
+/* 3000원을  161500원 옆에 끝에 작은글자 오고싶어요 */
+.content_summary .stock1 .text_wrap{position: relative;}
+.content_summary .stock1 .text_wrap .figure{
+  position: absolute;
+  bottom:26px; right: 0px;
+}
+.content_summary .stock1 .text_wrap .date{
+  text-align: right;
+}
+
+
 .content_summary .stock2{
   font-size:18px;
 }
