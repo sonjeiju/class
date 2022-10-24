@@ -539,8 +539,59 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 .content_summary .stock2{
   font-size:18px;
 }
-/* .main_content .content_service{}
-.main_content .content_support{} */
+
+
+/* .content_service */
+ .main_content .content_service{}
+ .service_list_container{
+  display: flex;
+  /* 플렉스 아이템의 줄바꿈 */
+  flex-wrap: wrap;
+ }
+ /* 단(column)의 크기는 플렉스아이템 */
+ li.service_thumbnail_box{
+  /* flex-basis: 33.33%; */
+  /* flex:0 1 33.33%; */
+  /* 플렉스 아이템의 후손의 크기가 플렉스 아이템보다 클경우를 생각해서   
+  flex-direction:row경우 width 지정
+  flex-direction:column경우 height 지정
+  */
+  width:33.33%; 
+  box-sizing: border-box;
+  background-color: #ccc;/*작업후삭제*/
+  border:1px solid #f00;/*작업후삭제*/
+ }
+ /* li.service_thumbnail_box a.thumbnail_dimmed{ */
+ li.service_thumbnail_box a{
+   position: relative; /*li.service_thumbnail_box .description*/
+   color:#fff;
+ }
+ li.service_thumbnail_box .thumbnail{}
+ li.service_thumbnail_box .thumbnail img{}
+ li.service_thumbnail_box .description{
+   position: absolute;
+   /* 일반흐름제외  */
+   width:100%;  
+   /* 너비 지정하지 않을경우 너비-자식,후손 크기 높이-자식,후손크기 
+       너비를 지정 기준요소의 너비 -기분요소의 너비에서 높이-자식,후손크기
+   */
+   left:0; bottom:0;
+  padding:30px;
+ }
+ li.service_thumbnail_box  .description .title_text{
+   font-size:28px;
+   margin-bottom:10px;
+ }
+ li.service_thumbnail_box  .description .desc_text{
+  font-size:18px;
+  /*한줄 말줄임표*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+ /*.main_content .content_support{} */
 
 /************ 
 *플러그인
