@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 가변크기 정사각형</title>
+  <style>
+*{margin:0; padding:0; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+
+/* a태그에  밑줄문자 없는 글자색 검정   */
+a{ color:#000; text-decoration: none;}
+/* a에 hover 시 밑줄문자 */
+a:hover{text-decoration: underline;}
+
+.content_service{
+  width:80%;
+  margin:0 auto;
+}
+
+/*
+.service_list_container
+3단 flex layout   
+*/
+.service_list_container{
+display: flex; 
+/* 플렉스 컨테이너 */
+flex-wrap: wrap;
+/*여러줄 3단*/
+}
+ul.service_list_container li.service_thumbnail_box{
+  position: relative;/*기준요소*/
+
+  /* 플렉스아이템 */
+  flex-basis: 33.333%;
+  width:33.333%;
+  /* 
+  가변크기로 정사각형  
+  padding-top:width와 동일한크기;
+  */
+  padding-top:33.333%; /*❤❤❤❤❤❤❤❤❤❤*/
+  box-sizing: border-box;
+
+  background-color: #ccc;
+  border: 1px solid #f00;
+}
+li.service_thumbnail_box a.thumbnail_dimmed{
+  position: absolute; 
+  left:0; top:0;
+  /* 기준요소  */
+  display: block;
+
+   background-color: #ef8;
+   border: 1px solid #000;
+   box-sizing: border-box;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="content_service">
+      <!-- 
+        ul.service_list_container>li.service_thumbnail_box*6>a.thumbnail_dimmed>dl.description>dt.title_text>lorem2^dd.desc_text>lorem7 
+      -->
+      <ul class="service_list_container">
+        <li class="service_thumbnail_box">
+          <a href="" class="thumbnail_dimmed">
+            <dl class="description">
+              <dt class="title_text">Lorem, ipsum.</dt>
+              <dd class="desc_text">Lorem ipsum dolor sit amet consectetur adipisicing.</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="service_thumbnail_box">
+          <a href="" class="thumbnail_dimmed">
+            <dl class="description">
+              <dt class="title_text">Omnis, excepturi.</dt>
+              <dd class="desc_text">Ipsa eveniet tempore doloremque inventore non natus!</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="service_thumbnail_box">
+          <a href="" class="thumbnail_dimmed">
+            <dl class="description">
+              <dt class="title_text">Ratione, exercitationem.</dt>
+              <dd class="desc_text">Dolores dolorum laborum nihil eum reprehenderit voluptas!</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="service_thumbnail_box">
+          <a href="" class="thumbnail_dimmed">
+            <dl class="description">
+              <dt class="title_text">Reprehenderit, sunt!</dt>
+              <dd class="desc_text">Et sunt nulla libero vel, ratione rem.</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="service_thumbnail_box">
+          <a href="" class="thumbnail_dimmed">
+            <dl class="description">
+              <dt class="title_text">Explicabo, ex.</dt>
+              <dd class="desc_text">Architecto corporis iusto fugit magnam sint illum.</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="service_thumbnail_box">
+          <a href="" class="thumbnail_dimmed">
+            <dl class="description">
+              <dt class="title_text">Magni, assumenda?</dt>
+              <dd class="desc_text">Quis vel obcaecati dolorem perspiciatis eaque aut.</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
