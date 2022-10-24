@@ -560,6 +560,7 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   box-sizing: border-box;
   background-color: #ccc;/*작업후삭제*/
   border:1px solid #f00;/*작업후삭제*/
+  overflow: hidden;
  }
  /* li.service_thumbnail_box a.thumbnail_dimmed{ */
  li.service_thumbnail_box a{
@@ -575,9 +576,34 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
    /* 너비 지정하지 않을경우 너비-자식,후손 크기 높이-자식,후손크기 
        너비를 지정 기준요소의 너비 -기분요소의 너비에서 높이-자식,후손크기
    */
-   left:0; bottom:0;
-  padding:30px;
+   left:0; bottom:-300px;
+   transition: bottom 0.5s;
+  padding:50px 30px 30px;
+  /* 배경이미지 아이콘이 별도로 작업했다면  */
+  /* background:no-repeat url(../img/main/play_circle_FILL0_wght600_GRAD0_opsz48.png) 30px 0px; */
+  
+  /* 배경이미지 크기 지정 */
+  /* background-size:30px 30px; */
+
+  /* sprite 작업되었다면 :after에 주세요 */
+  /* background:no-repeat url(../img/sprite.png) 30px 0px; */
  }
+ li.service_thumbnail_box:hover .description{
+   bottom:0;
+}
+
+ li.service_thumbnail_box .description:after{
+  content:'';
+  display: block;
+  position: absolute; 
+  /*기준요소는? li.service_thumbnail_box .description*/
+  left:30px; top:0;
+  width: 23px; height: 23px; /*스프라이트 내 해당아이콘 크기*/
+  background:no-repeat url(../img/sprite.png) ;
+  background-position: -199px -129px;
+  /*스프라이트 내 해당아이콘 위치*/
+ }
+
  li.service_thumbnail_box  .description .title_text{
    font-size:28px;
    margin-bottom:10px;
