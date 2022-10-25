@@ -39,22 +39,94 @@ ul.service_list_container li.service_thumbnail_box{
   가변크기로 정사각형  
   padding-top:width와 동일한크기;
   */
-  padding-top:33.333%; /*❤❤❤❤❤❤❤❤❤❤*/
+   /*❤❤❤❤❤❤❤❤❤❤*/
+  padding-top:33.333%; 
+  /*❤❤❤❤❤❤❤❤❤❤*/
   box-sizing: border-box;
-
-  background-color: #ccc;
-  border: 1px solid #f00;
+ 
+  background: no-repeat center/cover;
+  overflow: hidden;
 }
+ul.service_list_container li.service_thumbnail_box:nth-child(1){
+  background-image:url(../naver/img/main/img_main_content13.png) ;
+}
+ul.service_list_container li.service_thumbnail_box:nth-child(2){
+  background-image:url(../naver/img/main/img_main_content14.png) ;
+}
+ul.service_list_container li.service_thumbnail_box:nth-child(3){
+  background-image:url(../naver/img/main/img_main_content15.png) ;
+}
+ul.service_list_container li.service_thumbnail_box:nth-child(4){
+  background-image:url(../naver/img/main/img_main_content18.png) ;
+}
+ul.service_list_container li.service_thumbnail_box:nth-child(5){
+  background-image:url(../naver/img/main/img_main_content19.png) ;
+}
+ul.service_list_container li.service_thumbnail_box:nth-child(6){
+  background-image:url(../naver/img/main/img_main_content4.png) ;
+}
+
+/* 
+  li후버시 검정 dimmed 표시
+  li.service_thumbnail_box a.thumbnail_dimmed
+  li.service_thumbnail_box  a.thumbnail_dimmed:after
+  li.service_thumbnail_box:hover  a.thumbnail_dimmed:after
+*/
 li.service_thumbnail_box a.thumbnail_dimmed{
   position: absolute; 
   left:0; top:0;
+  /*기준요소랑 사이즈 동일하게*/
+  width:100%; height: 100%; 
   /* 기준요소  */
   display: block;
-
-   background-color: #ef8;
-   border: 1px solid #000;
-   box-sizing: border-box;
+  box-sizing: border-box;
+  color:#fff; 
+  /* a.thumbnail_dimmed 후손은 color 상속 */
 }
+
+li.service_thumbnail_box  a.thumbnail_dimmed:after{
+  /*:before , :after 에 스타일을 적용하기 위해서
+    반드시  content: ''; */
+  content: '';
+  position: absolute; 
+  /* 기준요소  a.thumbnail_dimmed*/
+  left:0; top:0;
+  /*기준요소랑 사이즈 동일하게*/
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 10;
+}
+li.service_thumbnail_box:hover  a.thumbnail_dimmed:after{
+  opacity: 1;
+}
+
+/* a 요소 왼쪽 아래에 위치하게*/
+li.service_thumbnail_box dl.description{
+  position: absolute;
+  left:0; bottom:-300px;
+  transition: all 0.5s;
+  width: 100%;
+  /* 기준요소의 content영역을 자신의 너비 */
+  padding:50px 30px 30px;
+  box-sizing: border-box;
+  z-index: 20;
+
+}
+li.service_thumbnail_box:hover dl.description{
+  bottom: 0;
+}
+
+
+/* dd 한줄 말줄임표 */
+li.service_thumbnail_box dl.description  dd.desc_text{
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
 
 
