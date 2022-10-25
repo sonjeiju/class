@@ -437,13 +437,27 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   align-content: stretch; */
 }
 .content_summary .summary_container{
+  position: relative;
   flex-basis: 25%;
   width:25%;
   /* flex-grow: 0;
   flex-shrink: 1; */
-  border: 1px solid #f00;
-  padding-right:50px;
+  padding:0 50px;/*❤❤❤❤❤*/
 }
+.content_summary .summary_container:first-child{
+  padding-left:0;/*❤❤❤❤❤*/
+}
+.content_summary .summary_container:after{
+  content:'';/*❤❤❤❤❤*/
+  position: absolute; right:0; top:0;/*❤❤❤❤❤*/
+  width:1px; height: 100%;/*❤❤❤❤❤*/
+  background-color: #ccc;
+}
+.content_summary .summary_container:last-child::after{
+  display: none;/*❤❤❤❤❤*/
+}
+
+
 .content_summary  h3.summary_title{
   /* font-family: 'Nanum Gothic', sans-serif; */
   font-size: 14px;
@@ -509,7 +523,7 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   background-position: -108px -49px;
 }
 .content_summary .news{}
-.content_summary .career{
+.content_summary .career .text_wrap{
   font-size:18px;
 }
 .content_summary .stock1{}
@@ -536,7 +550,7 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 
 
-.content_summary .stock2{
+.content_summary .stock2 .text_wrap{
   font-size:18px;
 }
 
@@ -716,16 +730,28 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
     /* flex: 0 0 25%; */
     /* flex-basis: 25%;  */
     width:25%;
-    background-color: #ccc;
-    border: 1px solid #000;
     box-sizing: border-box;
+    position: relative;/*❤❤❤❤❤*/
+  }
+
+  .content_support  li.support_list_box:after{
+    content: '';/*❤❤❤❤❤*/
+    position: absolute;/*❤❤❤❤❤*/
+    right: 0; top:0;/*❤❤❤❤❤*/
+    width:1px; height: 100%;/*❤❤❤❤❤*/
+    background-color: #e5e5e5;
+  }
+
+  .content_support  li.support_list_box:last-child:after{
+    display: none;
   }
   .content_support  li.support_list_box a{
     /*bgi 용*/
     display: block;
-    padding-top: 135px;
+    padding: 135px 10px 0;
     position: relative;
   }
+  
   .content_support  li.support_list_box a::after{
     content: '';
     position: absolute;
@@ -748,7 +774,25 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   .content_support  li.support_list_box:nth-child(4) a::after{
     width: 93px; 
     background-position:-316px -957px;}
+
+  /* .content_support  li.support_list_box .description{} */
+  .content_support  li.support_list_box a .title_text{
+    color:var(--naver-color);
+    font-size:18px;
+    font-weight: bold;
+    margin-bottom:15px;
+  }
   
+  .content_support  li.support_list_box a:hover .title_text{
+    text-decoration: underline;
+  }
+
+  .content_support  li.support_list_box a .desc_text{
+    /* 글자색  검정*/
+    color:#878890;
+    line-height: 1.6;
+    font-size: 15px;
+  }
 
   
 
