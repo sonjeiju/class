@@ -672,7 +672,85 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 
 
- /*.main_content .content_support{} */
+ /*.main_content .content_support */
+ .main_content .content_support{
+    /*.content_suppor위 바깥여백 150px */
+    margin-top:150px;
+    /* 인라인요소 또는 텍스트는 가운데 정렬 */
+    text-align: center;
+ }
+  .content_support .support_title{
+    position: relative;/*❤❤❤❤❤*/
+    font-size: 32px; color:#333;
+    /* 아래 여백 20px */
+    padding-bottom:20px;
+    margin-bottom:20px;
+  }
+  .content_support .support_title:after{
+    content:'';/*❤❤❤❤❤*/
+    position: absolute;/*❤❤❤❤❤*/
+    left:50%; bottom:0px;/*❤❤❤❤❤*/
+    width:5rem; height:2px;
+    background-color: var(--naver-color);
+    /* x좌표로 본인 크기의 반이 왼쪽으로 이동 */
+    transform: translateX(-50%);/*❤❤❤❤❤*/
+  }
+
+  .content_support .support_text{
+    font-size: 18px;
+    line-height: 1.6;
+    color:#000;
+  }
+
+  .content_support  ul.support_list_container{
+    margin-top:120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: start;
+    align-content: stretch;
+  }
+
+  .content_support  li.support_list_box{
+    /* 플렉스 아이템 */
+    /* flex: 0 0 25%; */
+    /* flex-basis: 25%;  */
+    width:25%;
+    background-color: #ccc;
+    border: 1px solid #000;
+    box-sizing: border-box;
+  }
+  .content_support  li.support_list_box a{
+    /*bgi 용*/
+    display: block;
+    padding-top: 135px;
+    position: relative;
+  }
+  .content_support  li.support_list_box a::after{
+    content: '';
+    position: absolute;
+    left:50%; top:0;
+     /* x좌표로 본인 크기의 반이 왼쪽으로 이동 */
+    transform: translateX(-50%);
+    background: transparent  no-repeat url(../img/sprite.png);
+    height: 100px;
+    /*높이를 지정하지 않으면 자식의 요소만큼*/
+  }
+  .content_support  li.support_list_box:nth-child(1) a::after{
+    width: 87px; 
+    background-position:0 -957px;}
+  .content_support  li.support_list_box:nth-child(2) a::after{
+    width: 101px; 
+    background-position:-92px -957px;}
+  .content_support  li.support_list_box:nth-child(3) a::after{
+    width: 110px; 
+    background-position:-199px -957px;}
+  .content_support  li.support_list_box:nth-child(4) a::after{
+    width: 93px; 
+    background-position:-316px -957px;}
+  
+
+  
 
 /************ 
 *플러그인
