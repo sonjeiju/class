@@ -814,16 +814,69 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   /**
   footer
   **/
-  footer{}
+  footer{
+    padding-top:100px;
+    padding-bottom:100px;
+  }
   footer .footer_wrap{
     display: flex;
+    position: relative;
   }
   .footer_wrap .flex_item{
-    width:25%;
+  /*나중삭제*/
+    /* width:25%; */
+    /* 플렉스 아이템 자신의 크기만큼 가져가기위서
+     width:25%; 단 컬럼 지정 %를 사용하지 말고
+     고유크기로 지정
+     flex-basis:auto;
+    */
     box-sizing: border-box;
     background-color: #fff;
     border: 1px solid #000;
   }
+  .footer_wrap .footer_logo{
+    /* 플렉스 아이템 고유 크기 지정 */
+    width:63px; height: 13px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../img/footer_logo.png);
+  }
+  .footer_wrap .footer_menu{
+    display: flex;
+    padding:0 10px;
+  }
+  .footer_wrap .footer_menu li{
+    padding:0 10px;
+    position: relative;
+  }
+  .footer_wrap .footer_menu li:after{
+    content: '';
+    position: absolute;
+    right: 0; top:0;
+    width:1px; height: 100%;
+    background-color: #e5e5e5;
+  }
+  .footer_wrap .footer_menu li:last-child:after{
+    display: none;
+  }
+  .footer_wrap .footer_menu li a{}
+
+  .footer_wrap .affiliate_box {
+    order:1;
+    margin-left:auto;/*❤❤❤*/
+    /* 플렉스컨테이너의 남은 공간을 알아서 여백으로 왼쪽에 주세요 */
+  }
+  .footer_wrap .affiliate_box  ul{
+    display: none;
+  }
+
+  .footer_wrap .footer_copy{
+     position: absolute;
+     left:50%; top:0;
+     transform:translateX(-50%);
+  }
+  
+  
 
 
 
