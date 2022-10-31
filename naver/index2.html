@@ -18,7 +18,7 @@
         <a href="index.html"><span class="blind">naver</span></a>
       </h1>
       <!-- nav -->
-      <nav>
+      <nav class="desktop-only">
         <ul class="gnb_menu" role="menu">
           <!-- .gnb_menu_list 활성화 시, on클래스 추가 // .gnb_menu_list에 호버, 포커스 시, .gnb_menu_item의 aria-expanded="true" // .gnb_dropMenu_wrap slideUp, Down -->
           <li class="gnb_menu_list" role="menuitem" aria-haspopup="true">
@@ -586,15 +586,31 @@
     </ul>
     <div class="affiliate_box flex_item">
       <button type="button">자회사바로가기</button>
-      <ul>
-        <li><a href=""><span>text</span></a></li>
-        <li><a href=""><span>text</span></a></li>
-        <li><a href=""><span>text</span></a></li>
-        <li><a href=""><span>text</span></a></li>
-        <li><a href=""><span>text</span></a></li>
-        <li><a href=""><span>text</span></a></li>
-        <li><a href=""><span>text</span></a></li>
-      </ul>
+      <ul class="affiliate_list" role="listbox">
+				<!-- [D] .affiliate_item선택 시, aria-selected="true" -->
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://linepluscorp.com/" target="_blank"><span>LINE</span></a>
+				</li>
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://www.naverlabs.com/" target="_blank"><span>NAVER Labs</span></a>
+				</li>
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://www.navercloudcorp.com" target="_blank"><span>NAVER Cloud</span></a>
+				</li>
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://snowcorp.com/ko/" target="_blank"><span>SNOW</span></a>
+				</li>
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://webtoonscorp.com/" target="_blank"><span>Webtoon</span></a>
+				</li>
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://naver.worksmobile.com" target="_blank"><span>Works Mobile</span></a>
+				</li>
+				<li class="affiliate_item" role="option" aria-selected="false">
+					<a href="https://www.naverfincorp.com" target="_blank"><span>NAVER FINANCIAL</span></a>
+				</li>
+			</ul>
+
     </div>
     <p class="footer_copy flex_item">
       Copyright ©
