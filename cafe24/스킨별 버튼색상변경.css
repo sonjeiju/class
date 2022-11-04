@@ -1,0 +1,29 @@
+
+/* 버튼색상변경 */
+/* easy */
+[class^='btnSubmit'], a[class^='btnSubmit'] {
+  background: #1a1a1a;
+  color: #fff;
+}
+[class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
+  border-color: #000;
+}
+
+/* no3 */
+.ec-base-button[class*="gColumn"] [class^='btn']:hover {
+  background: #fa5757;
+  color: #fff;
+}
+
+[class^='btnSubmit'], a[class^='btnSubmit']{
+background: #000;
+}
+
+/* ibase */
+[class^='btnSubmit'], a[class^='btnSubmit'] {
+background: #000;
+}
+
+[class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
+  border-color: #000;
+}
