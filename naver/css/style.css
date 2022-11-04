@@ -227,12 +227,20 @@ header {
 .main_content{}
 
 footer{
+<<<<<<< HEAD
   background-color:  #f8f8f8;
+=======
+  background-color: #f8f8f8 ;
+>>>>>>> b6da69a9d443a05c5cf5d26fbe7ed0814284226a
 }
 
 header .header_wrap,
 footer .footer_wrap{
+<<<<<<< HEAD
   max-width: 100px;
+=======
+  max-width: 1300px;
+>>>>>>> b6da69a9d443a05c5cf5d26fbe7ed0814284226a
   margin: 0 auto;
 }
 
@@ -865,11 +873,16 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 
   .footer_wrap .affiliate_box {
     position: relative;
+<<<<<<< HEAD
+=======
+    /* .footer_wrap .affiliate_box  .affiliate_list의 기준요소 */
+>>>>>>> b6da69a9d443a05c5cf5d26fbe7ed0814284226a
     order:1;
     margin-left:auto;/*❤❤❤*/
     /* 플렉스컨테이너의 남은 공간을 알아서 여백으로 왼쪽에 주세요 */
   
   }
+<<<<<<< HEAD
   /* .footer_wrap .affiliate_box   */
   .affiliate_list{
     /* 기준요소지정 */
@@ -890,6 +903,29 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
     a:hover{
       color:var(--naver-color) ;
     }
+=======
+  .footer_wrap .affiliate_box  .affiliate_list{
+    display: none; /*스크립트 이용해서 표시*/
+    /*기준요소지정
+     .footer_wrap .affiliate_box 
+     */
+     position: absolute;
+     width:200px;
+     left:-20px; bottom:-10px;
+     padding:1.5rem 1rem;
+     background-color: #fff;
+     border: 1px solid #999;
+  }
+  
+  .footer_wrap .affiliate_box  .affiliate_list .affiliate_item{}
+  .footer_wrap .affiliate_box  .affiliate_list .affiliate_item a{
+     color:#999;
+     font-size:0.7rem;
+  }
+  .footer_wrap .affiliate_box  .affiliate_list .affiliate_item a:hover{
+     color:var(--naver-color);
+  }
+>>>>>>> b6da69a9d443a05c5cf5d26fbe7ed0814284226a
   
   .footer_wrap .footer_copy{
      position: absolute;
@@ -997,6 +1033,7 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 
 
+<<<<<<< HEAD
 
 /* 
 반응형웹 설정 
@@ -1046,3 +1083,116 @@ footer .footer_wrap
   max-width: none;
   margin: 0 50px;
   }
+=======
+/* 
+반응형웹 설정
+*/
+/* desktop에만 보이는 
+  desktop-only
+*/
+.desktop-only{
+  display: block;
+}
+@media (max-width:1199.98px){
+  .desktop-only{
+    display: none;
+  }
+}
+
+
+
+ /* 1200 이하의 스크린에서 보일 css */
+@media (max-width:1200px){
+  
+  header .header_wrap,
+  footer .footer_wrap{
+    max-width: none;
+    margin: 0 50px;
+  }
+
+  .main_content{
+    padding:50px;
+  }
+
+  .main_content ul.content_summary{
+    flex-wrap: wrap;
+  }
+  .content_summary .summary_container{
+    flex-basis: 50%;
+    width:50%;
+  }
+  .content_summary .summary_container{
+    margin-bottom:50px;
+  }
+  /* 두번째 li 오른쪽 선 없애기 */
+  .content_summary .career:after{
+    display: none;
+  }
+  /* 세번재 li 왼쪽 여백 없애기 */
+  .content_summary .stock1{
+    padding-left:0;
+  }
+
+  .service_list_container li.service_thumbnail_box{
+   width:50%;
+   flex-basis: 50%;
+  }
+
+  .content_support  ul.support_list_container{
+    flex-wrap: wrap;
+  }
+
+  .content_support  li.support_list_box{
+    width:50%;
+   flex-basis: 50%;
+  }
+
+  .content_support  li.support_list_box:nth-child(2)::after{
+   display: none;
+  }
+
+
+}/*@media (max-width:1199.98px)*/
+
+
+
+/* 
+768px 이하의스크린에서 보일 css 
+*/
+@media (max-width:768px){
+  header .header_wrap,
+  footer .footer_wrap{
+    max-width: none;
+    margin: 0 50px;
+  }
+
+  .content_summary .summary_container{
+    flex-basis: 100%;
+    width:100%;
+  }
+  .content_summary .summary_container{
+    margin-bottom:50px;
+    padding:0;
+  }
+  /* 두번째 li 오른쪽 선 없애기 */
+  .content_summary .summary_container:after{
+    display: none;
+  }
+  
+  .service_list_container li.service_thumbnail_box{
+    width:100%;
+    flex-basis: 100%;
+   }
+
+   .content_support  li.support_list_box{
+    width:100%;
+   flex-basis: 100%;
+  }
+
+  .content_support  li.support_list_box::after{
+    display: none;
+   }
+
+}/*@media (max-width:767.98px)*/
+
+>>>>>>> b6da69a9d443a05c5cf5d26fbe7ed0814284226a
