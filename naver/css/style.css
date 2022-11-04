@@ -227,12 +227,12 @@ header {
 .main_content{}
 
 footer{
-  background-color:  rgba(0, 0, 0, 0.3);
+  background-color:  #f8f8f8;
 }
 
 header .header_wrap,
 footer .footer_wrap{
-  max-width: 1600px;
+  max-width: 100px;
   margin: 0 auto;
 }
 
@@ -821,6 +821,8 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   footer .footer_wrap{
     display: flex;
     position: relative;
+    justify-content: flex-start;
+    align-items: center;
   }
   .footer_wrap .flex_item{
   /*나중삭제*/
@@ -831,8 +833,8 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
      flex-basis:auto;
     */
     box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #000;
+    /* background-color: #fff; */
+    /* border: 1px solid #000; */
   }
   .footer_wrap .footer_logo{
     /* 플렉스 아이템 고유 크기 지정 */
@@ -862,14 +864,33 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   .footer_wrap .footer_menu li a{}
 
   .footer_wrap .affiliate_box {
+    position: relative;
     order:1;
     margin-left:auto;/*❤❤❤*/
     /* 플렉스컨테이너의 남은 공간을 알아서 여백으로 왼쪽에 주세요 */
+  
   }
-  .footer_wrap .affiliate_box  ul{
-    display: none;
+  /* .footer_wrap .affiliate_box   */
+  .affiliate_list{
+    /* 기준요소지정 */
+    position: absolute;
+    width: 200px;
+    left: -20px ; bottom: -10px;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    border: 1px solid #999;
+    /* display: none; */
   }
-
+  .footer_wrap .affiliate_box .affiliate_list .affiliate__item{}
+  .footer_wrap .affiliate_box .affiliate_list .affiliate__item a{
+    color: #999;
+    font-size: 0.7rem;
+  }
+  .footer_wrap .affiliate_box .affiliate_list .affiliate__item
+    a:hover{
+      color:var(--naver-color) ;
+    }
+  
   .footer_wrap .footer_copy{
      position: absolute;
      left:50%; top:0;
@@ -976,3 +997,52 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 
 
+
+/* 
+반응형웹 설정 
+*/
+/* 768px 이하의 스크린에서 보일 css*/
+.desktop-only{
+  display: block;
+}
+@media(min-wdith:199.98px){}
+
+
+
+
+
+
+
+    
+
+@media (max-width:1199.98px){
+  /* 1200px 이하의 스크린에서 보일 css */
+}
+
+header .header_wrap,
+footer .footer_wrap{
+  max-width: none;
+  margin: 0 50px;
+}
+.main_content ul.content_summary{
+  flex-wrap:wrap;
+}
+
+.content_summary .career ::after{
+  display: none;
+}
+.content_summary .summary_container{
+  flex-basis: 100%;
+
+}
+.content_summary .stock1
+
+.service_list_container li.service_thumbnail_box{
+  
+}
+@media (max-width:767.98px){
+  header .header_wrap,
+footer .footer_wrap
+  max-width: none;
+  margin: 0 50px;
+  }
